@@ -1,0 +1,11 @@
+<div class="container">
+  <form (ngSubmit)="searchAlbum(search.value)">
+    <div class="form-group">
+      <label class="col-form-label" for="search_string">Search Album</label>
+      <div class="input-group">
+        <input #search autocomplete="off" id="search_string" type="text" class="form-control" placeholder="Album name">
+        <button type="submit" class="btn btn-outline-primary">Search</button>
+      </div>
+    </div>
+  </form>
+</div>

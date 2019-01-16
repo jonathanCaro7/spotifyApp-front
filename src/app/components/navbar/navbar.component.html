@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" routerLink="/">
+  </a>
+  <button (click)="toggle()" class="navbar-toggler" type="button">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div
+    [class.open]="isOpen"
+    [ngClass]="{ 'collapse navbar-collapse': !isSide, sidenav: isSide }"
+  >
+    <ul (click)="toggle()" class="navbar-nav mr-auto navbar-left">
+    </ul>
+    <ul (click)="toggle()" class="navbar-nav navbar-right">
+    </ul>
+  </div>
+</nav>
+
+<div (click)="toggle()" class="sidenav-wrapper" [class.open]="isOpen"></div>

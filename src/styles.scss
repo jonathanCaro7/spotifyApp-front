@@ -1,1 +1,64 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/lib/bootswatch/solar/variables";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "src/lib/bootswatch/solar/bootswatch";
+
+html,
+body {
+  height: 100%;
+}
+
+[class$="-tooltip"] {
+  right: 0;
+}
+
+.form-group {
+    position: relative;
+  
+    .pending-tooltip {
+        position: absolute;
+        top: 100%;
+        z-index: 5;
+        display: none;
+        max-width: 100%;
+        padding: 0.25rem 0.5rem;
+        margin-top: .1rem;
+        font-size: 0.875rem;
+        line-height: 1.5;
+        color: #fff;
+        background-color: lighten($info, 1%);
+        border-radius: 0.25rem;
+    }
+  }
+  
+  .form-row > .form-group {
+    [class$="-tooltip"] {
+      right: 5px;
+    }
+  }
+
+  .form-control.is-pending {
+    border-color: lighten($info, 5%);
+  
+    ~ .pending-tooltip {
+      display: block;
+    }
+  
+    &:focus {
+      box-shadow: 0 0 0 0.2rem lighten($info, 30%);
+    }
+  }
+
+  .alert {
+    margin-bottom: 0;
+  }
+  
+  .toast-container .alert {
+    position: relative;
+    overflow: hidden;
+    margin: 0 6px 6px;
+    padding: 15px 15px 15px 50px;
+    width: 300px;
+    color: #ffffff;
+    pointer-events: auto;
+    cursor: pointer;
+  }
