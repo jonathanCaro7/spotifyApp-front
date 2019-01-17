@@ -12,13 +12,15 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { SearchComponent } from './components/search/search.component';
 import { AlbumComponent } from './components/album/album.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     SearchComponent,
-    AlbumComponent
+    AlbumComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

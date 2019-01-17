@@ -1,0 +1,11 @@
+.row.no-gutters {
+    .pagination {
+      margin: 0;
+  
+      .page-link {
+        min-width: 40px;
+        min-height: 38px;
+        text-align: center;
+      }
+    }   
+  }

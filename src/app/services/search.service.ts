@@ -11,8 +11,8 @@ export class SearchService {
 
   constructor(private http: HttpClient) { }
 
-  search(albumName: string) {
-    return this.http.get(`${environment.api_endpoint}?album=${albumName}`)
+  search(albumName: string, currentPage: number) {
+    return this.http.get(`${environment.api_endpoint}?album=${albumName}&page=${currentPage}`)
       .pipe(catchError(this.handleError));
   }
 

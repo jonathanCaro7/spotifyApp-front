@@ -1,9 +1,9 @@
 <div class="container">
-  <form (ngSubmit)="searchAlbum(search.value)">
+  <form (ngSubmit)="submitForm()">
     <div class="form-group">
-      <label class="col-form-label" for="search_string">Search Album</label>
+      <label class="col-form-label" for="album_name">Search Album</label>
       <div class="input-group">
-        <input #search autocomplete="off" id="search_string" type="text" class="form-control" placeholder="Album name">
+        <input name="album_name" [(ngModel)]="album_name" autocomplete="off" id="album_name" type="text" class="form-control" placeholder="Album name">
         <button type="submit" class="btn btn-outline-primary">Search</button>
       </div>
     </div>
@@ -14,4 +14,6 @@
       <app-album [album]="album"></app-album>
     </div>
   </div>
+
+  <app-pagination #pagination></app-pagination>
 </div>
