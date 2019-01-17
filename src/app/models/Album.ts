@@ -5,7 +5,7 @@ export class Album {
     id: string;
     href: string;
     album_type: string;
-    artist: Artist[];
+    artists: Artist[];
     images: Image[];
     name: string;
     release_date: string;
