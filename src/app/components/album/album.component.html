@@ -1,0 +1,13 @@
+<div class="card border-success">
+  <h3 class="card-header">{{ album.name }}</h3>
+  <div class="card-body">
+    <span>{{ album.album_type }}</span>
+    <small class="float-right">{{ album.release_date }}</small>
+    <span> ({{ album.total_tracks }})</span>
+    <h6 class="card-subtitle mb-2 text-muted">
+      <span>Artists:</span>
+      <span *ngFor="let artist of album.artists"> {{ artist.name }}</span>
+    </h6>
+  </div>
+  <img style="height: 200px; width: 100%; display: block;" [src]="album.images[1].url" alt="Card image">
+</div>

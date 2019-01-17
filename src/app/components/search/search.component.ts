@@ -9,14 +9,18 @@ import { Album } from 'src/app/models/Album';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent {
-  private albums: Album[];
+  albums: Album[];
+
   constructor(
     private searchService: SearchService,
     private toast: ToastrService) { }
 
   searchAlbum(album: string) {
     this.searchService.search(album).subscribe(
-      (res: Album[]) => console.log(res),
+      (res: any) => {
+        console.log(res);
+        this.albums = res.items;
+      },
       (err: string) => this.toast.error(err)
     );
   }

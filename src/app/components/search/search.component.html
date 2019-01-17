@@ -8,4 +8,10 @@
       </div>
     </div>
   </form>
+
+  <div class="card-columns">
+    <div *ngFor="let album of albums">
+      <app-album [album]="album"></app-album>
+    </div>
+  </div>
 </div>
